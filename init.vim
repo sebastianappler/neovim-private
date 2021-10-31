@@ -19,6 +19,7 @@ nnoremap <ESC> :noh<CR><CR>
 nnoremap <C-x><C-f> :FZF<CR>
 nnoremap <A-0> :NERDTree<CR>
 nnoremap <C-f> :NERDTreeFind<CR>cd
+
 " Plugins
 "
 call plug#begin()
@@ -28,6 +29,7 @@ call plug#begin()
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'mhinz/vim-startify' 
   Plug 'ryanoasis/vim-devicons'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'romgrk/barbar.nvim'
@@ -56,7 +58,6 @@ endfunction
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif 
 
 " barbar
-"
 "
 command! CustomTreeOffset lua require('custom/tree').open()
 autocmd VimEnter * CustomTreeOffset
