@@ -37,7 +37,6 @@ call plug#end()
 
 " NERDTree
 "
-
 let g:NERDTreeChDirMode=2
 autocmd FileType nerdtree let t:nerdtree_winnr = bufwinnr('%')
 autocmd BufWinEnter * call PreventBuffersInNERDTree()
